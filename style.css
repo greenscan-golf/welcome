@@ -277,6 +277,7 @@ nav.scrolled {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .hero-commander:hover {
@@ -931,7 +932,7 @@ footer {
 }
 
 .commander-content {
-  height: 300px;
+  height: fit-content;
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
