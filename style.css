@@ -1048,23 +1048,10 @@ footer {
 
   .vis-mosaic {
     grid-template-columns: 1fr;
-    grid-template-rows: 260px 320px 180px 160px;
+    gap: 14px;
   }
 
-  .img-aerial {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .img-booklet {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .img-sensor {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .img-grass {
-    grid-column: 1;
-    grid-row: 4;
+  .img-cell {
+    min-height: 240px;
   }
 }
