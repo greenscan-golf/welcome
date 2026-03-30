@@ -54,14 +54,6 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-/* ---- Image Gallery - Set backgrounds from img src ---- */
-document.querySelectorAll(".img-cell").forEach((cell) => {
-  const img = cell.querySelector("img");
-  if (img && img.src) {
-    cell.style.backgroundImage = `url('${img.src}')`;
-  }
-});
-
 /* ---- Image Gallery Lightbox ---- */
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
