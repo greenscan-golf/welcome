@@ -987,6 +987,14 @@ footer {
     padding: 0 24px;
   }
 
+  #hero {
+    background-attachment: scroll;
+  }
+
+  .img-cell {
+    background-attachment: scroll;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
