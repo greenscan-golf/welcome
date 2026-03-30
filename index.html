@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precision Green — Ingénierie LiDAR pour les Greens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <div class="dot-grid" aria-hidden="true">
+          <i></i><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i>
+        </div>
+        PRECISION GREEN
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Accueil</a></li>
+        <li><a href="#versions">Technologie</a></li>
+        <li><a href="#visualise">Parcours</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- ============================================================
+       HERO
+  ============================================================ -->
+    <section id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-wrap">
+        <!-- Left content -->
+        <div class="hero-content">
+          <span class="hero-tag">La maîtrise du terrain</span>
+          <h1 class="hero-title">
+            <span class="t-white">Précision</span>
+            <span class="t-white">sur</span>
+            <span class="t-green">Chaque</span>
+            <span class="t-green">Green</span>
+          </h1>
+          <p class="hero-desc">
+            Technologie LiDAR haute définition pour une lecture parfaite de chaque green.
+          </p>
+          <a href="#versions" class="hero-cta">
+            Voir la technologie <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <!-- Right — Topographic card -->
+        <div class="hero-visual">
+          <div class="topo-card">
+            <img
+              width="480px"
+              src="/assets/images/13-yvelines_green_13.jpg"
+              aria-hidden="true"
+            />
+            <!-- Data badge overlay -->
+            <div class="data-badge">
+              <div class="data-badge-title">POINT_DATA_ALPHA</div>
+              <div class="data-row">
+                <span class="lbl">PENTE</span>
+                <span class="val">3,4°</span>
+              </div>
+              <div class="data-row">
+                <span class="lbl">Aire</span>
+                <span class="val">±0,4 ha</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================
+       VERSIONS
+  ============================================================ -->
+    <section id="versions">
+      <div class="versions-header reveal">
+        <h2 class="versions-title">
+          Deux Versions. <em>Une Seule Précision.</em>
+        </h2>
+        <p class="versions-sub">
+          Choisissez l'outil adapté à votre jeu, que ce soit pour l'entraînement
+          technique ou le respect des standards de compétition.
+        </p>
+      </div>
+      <div class="versions-grid">
+        <!-- Entraînement -->
+        <div class="v-card reveal">
+          <span class="v-tag filled">Performance</span>
+          <h3 class="v-title">Version ENTRAÎNEMENT</h3>
+          <p class="v-desc">
+            Version enrichie conçue spécifiquement pour l'analyse technique
+            approfondie et le travail précis des pentes sur le green.
+          </p>
+          <ul class="v-features">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Précision chirurgicale de 0,7m
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Visualisation HD des ruptures de pente
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Vecteurs de direction détaillés
+            </li>
+          </ul>
+          <div class="v-precision">
+            <span class="prec-val">0,7m</span>
+            <span class="prec-lbl">Précision</span>
+          </div>
+        </div>
+        <!-- Compétition -->
+        <div class="v-card reveal d1">
+          <span class="v-tag outlined">Réglementaire</span>
+          <h3 class="v-title">Version COMPÉTITION</h3>
+          <p class="v-desc">
+            Conçue pour le tournoi. Conforme aux exigences strictes de l'USGA et
+            du R&amp;A pour une utilisation en compétition officielle.
+          </p>
+          <ul class="v-features">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Conforme à la règle 4.3 (Équipement)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Échelle réglementaire 1/480
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="#b8d84a"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="1.5,5 4,7.5 8.5,2.5" />
+                </svg>
+              </span>
+              Format USGA (16,8 × 17,8 cm)
+            </li>
+          </ul>
+          <div class="v-precision">
+            <span class="prec-val">0,9m</span>
+            <span class="prec-lbl">Précision</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================
+       FEATURES
+  ============================================================ -->
+    <section id="features">
+      <div class="features-grid">
+        <!-- LiDAR Precision -->
+        <div class="feat reveal">
+          <svg
+            class="feat-icon"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 7 L22 22"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M15 11 C13 14.5 12 17.5 12 21 C12 28 16.5 34 22 36.5 C27.5 34 32 28 32 21 C32 17.5 31 14.5 29 11"
+              stroke="currentColor"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              d="M 8 6 C 4.5 11.5 3 16 3 21 C3 31.5 11.5 40 22 40 C32.5 40 41 31.5 41 21 C41 16 39.5 11.5 36 6"
+              stroke="currentColor"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+              opacity="0.5"
+            />
+            <circle cx="22" cy="22" r="3" fill="currentColor" />
+          </svg>
+          <h3 class="feat-title">Précision LiDAR</h3>
+          <p class="feat-desc">
+            Utilisation du balayage laser aérien pour cartographier les surfaces
+            avec une capture haute résolution créant une réplique numérique
+            absolue de la topographie.
+          </p>
+        </div>
+        <!-- Haute Qualité -->
+        <div class="feat reveal d1">
+          <svg
+            class="feat-icon"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 3 L26.5 7.5 L32.5 6.5 L35 12 L40.5 14.5 L39.5 20.5 L44 22 L39.5 24 
+                   L40.5 30 L35 32.5 L32.5 38 L26.5 37 L22 41.5 L17.5 37 L11.5 38 L9 32.5 
+                   L3.5 30 L4.5 24 L0 22 L4.5 20.5 L3.5 14.5 L9 12 L11.5 6.5 L17.5 7.5 Z"
+              stroke="currentColor"
+              stroke-width="1.7"
+              fill="none"
+              stroke-linejoin="round"
+            />
+            <polyline
+              points="14,22 19.5,28 30,16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h3 class="feat-title">Haute Qualité</h3>
+          <p class="feat-desc">
+            Nos carnets sont imprimés sur des supports synthétiques premium,
+            conçus pour résister aux manipulations intensives tout en
+            garantissant une clarté d'impression parfaite.
+          </p>
+        </div>
+        <!-- Données LiDAR HD -->
+        <div class="feat reveal d2">
+          <svg
+            class="feat-icon"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 29 L22 37 L40 29"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity="0.45"
+            />
+            <path
+              d="M4 22 L22 30 L40 22"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity="0.7"
+            />
+            <path
+              d="M4 15 L22 23 L40 15 L22 7 Z"
+              stroke="currentColor"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h3 class="feat-title">Données LiDAR HD</h3>
+          <p class="feat-desc">
+            Acquisition nationale LiDAR HD avec une densité &gt; 10
+            impulsions/m² et un nuage de points classés (sol, végétation,
+            bâtiments).
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================
+       VISUALISER L'INVISIBLE
+  ============================================================ -->
+    <section id="visualise">
+      <div class="vis-wrap">
+        <div class="vis-header reveal">
+          <div>
+            <p class="vis-tag">Preuve de terrain</p>
+            <h2 class="vis-title">Visualiser <em>l'Invisible</em></h2>
+          </div>
+          <p class="vis-desc">
+            Nos tracés transforment la complexité du terrain en une cartographie
+            stratégique indispensable pour le haut niveau.
+          </p>
+        </div>
+        <div class="vis-mosaic">
+          <!-- Image 1 -->
+          <div class="img-cell reveal">
+            <img
+              src="/assets/images/15-yvelines_green_15.jpg"
+              aria-hidden="true"
+              alt="Cartographie LiDAR"
+            />
+            <div class="img-overlay">Vue haute définition détaillée de chaque green</div>
+          </div>
+          <!-- Image 2 -->
+          <div class="img-cell reveal d1">
+            <img
+              src="/assets/images/15-yvelines_map_15.jpg"
+              aria-hidden="true"
+              alt="Cartographie LiDAR"
+            />
+            <div class="img-overlay">Vue satellite globale avec distances de l'entrée de green</div>
+          </div>
+          <!-- Image 3 -->
+          <div class="img-cell reveal d2">
+            <img
+              src="/assets/images/15-yvelines_competition_15.jpg"
+              aria-hidden="true"
+              alt="Cartographie LiDAR"
+            />
+            <div class="img-overlay">Vue compétition à l'échelle 1/480 max</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer>
+      <div class="footer-logo">
+        <div class="dot-grid" aria-hidden="true">
+          <i></i><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i>
+        </div>
+        PRECISION GREEN
+      </div>
+      <p class="footer-copy">
+        © 2024 PRECISION GREEN — LIDAR SYSTEMS. TOUS DROITS RÉSERVÉS.
+      </p>
+      <ul class="footer-links">
+        <li><a href="#">Specs Techniques</a></li>
+        <li><a href="#">Politique de Confidentialité</a></li>
+        <li><a href="#">Support Contact</a></li>
+      </ul>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
