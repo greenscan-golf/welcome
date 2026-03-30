@@ -604,15 +604,15 @@ nav.scrolled {
 
 /* Individual images */
 .vis-mosaic > .img-cell:nth-child(1) {
-  background-image: url("/assets/images/15-yvelines_green_15.jpg");
+  background-image: url("assets/images/15-yvelines_green_15.jpg");
 }
 
 .vis-mosaic > .img-cell:nth-child(2) {
-  background-image: url("/assets/images/15-yvelines_map_15.jpg");
+  background-image: url("assets/images/15-yvelines_map_15.jpg");
 }
 
 .vis-mosaic > .img-cell:nth-child(3) {
-  background-image: url("/assets/images/15-yvelines_competition_15.jpg");
+  background-image: url("assets/images/15-yvelines_competition_15.jpg");
 }
 
 .img-cell::after {
