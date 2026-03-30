@@ -53,3 +53,46 @@ const io = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+/* ---- Image Gallery Lightbox ---- */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxClose = document.querySelector(".lightbox-close");
+const imgCells = document.querySelectorAll(".img-cell");
+
+// Open lightbox
+imgCells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    const img = cell.querySelector("img");
+    const overlay = cell.querySelector(".img-overlay");
+    
+    if (img) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || "Image agrandie";
+      lightboxCaption.textContent = overlay ? overlay.textContent : "";
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+  });
+});
+
+// Close lightbox
+const closeLightbox = () => {
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+};
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox || e.target === lightbox.querySelector(".lightbox-overlay")) {
+    closeLightbox();
+  }
+});
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.classList.contains("open")) {
+    closeLightbox();
+  }
+});
