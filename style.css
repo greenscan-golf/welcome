@@ -587,6 +587,9 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .img-cell::after {
@@ -599,9 +602,7 @@ nav.scrolled {
 }
 
 .img-cell img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  display: none;
 }
 
 .img-overlay {
