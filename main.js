@@ -96,3 +96,35 @@ document.addEventListener("keydown", (e) => {
     closeLightbox();
   }
 });
+
+/* ---- Commander Modal ---- */
+const commanderBtn = document.getElementById("commander-btn");
+const commanderModal = document.getElementById("commander-modal");
+const commanderClose = document.querySelector(".commander-close");
+const commanderOk = document.querySelector(".commander-ok");
+
+const openCommanderModal = () => {
+  commanderModal.classList.add("open");
+  document.body.style.overflow = "hidden";
+};
+
+const closeCommanderModal = () => {
+  commanderModal.classList.remove("open");
+  document.body.style.overflow = "";
+};
+
+commanderBtn.addEventListener("click", openCommanderModal);
+commanderClose.addEventListener("click", closeCommanderModal);
+commanderOk.addEventListener("click", closeCommanderModal);
+
+commanderModal.addEventListener("click", (e) => {
+  if (e.target === commanderModal || e.target === document.querySelector(".commander-overlay")) {
+    closeCommanderModal();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && commanderModal.classList.contains("open")) {
+    closeCommanderModal();
+  }
+});
