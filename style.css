@@ -167,7 +167,7 @@ nav.scrolled {
   /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); */
   background: linear-gradient(
     35deg,
-    rgba(0, 0, 0, 0.95) 32%,
+    rgba(0, 0, 0, 0.8) 32%,
     rgba(0, 0, 0, 0) 63%
   );
   pointer-events: none;
@@ -239,7 +239,7 @@ nav.scrolled {
 .hero-desc {
   font-size: 15px;
   font-weight: 300;
-  color: var(--text-light);
+  color: var(--text);
   line-height: 1.8;
   max-width: 380px;
   margin-bottom: 36px;
