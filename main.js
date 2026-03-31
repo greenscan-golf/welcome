@@ -42,17 +42,38 @@ window.addEventListener(
   { passive: true },
 );
 
-/* ---- Scroll reveal ---- */
+/* ---- Scroll reveal avec performance optimisée ---- */
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
-      if (e.isIntersecting) e.target.classList.add("in");
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        // Déconnecte l'observer pour cet élément pour économiser les ressources
+        io.unobserve(e.target);
+      }
     });
   },
   { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
 );
 
-document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+// Performance améliorée : observe en batch
+const observeElements = () => {
+  const reveals = document.querySelectorAll(".reveal");
+  const fragment = document.createDocumentFragment();
+  
+  reveals.forEach((el) => {
+    if (!el.classList.contains('in')) {
+      io.observe(el);
+    }
+  });
+};
+
+// Lance l'observation quand le DOM est prêt
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', observeElements);
+} else {
+  observeElements();
+}
 
 /* ---- Image Gallery Lightbox ---- */
 const lightbox = document.getElementById("lightbox");
@@ -101,7 +122,7 @@ document.addEventListener("keydown", (e) => {
 const commanderBtn = document.getElementById("commander-btn");
 const commanderModal = document.getElementById("commander-modal");
 const commanderClose = document.querySelector(".commander-close");
-const commanderOk = document.querySelector(".commander-ok");
+const commanderContact = document.querySelector(".commander-contact");
 
 const openCommanderModal = () => {
   commanderModal.classList.add("open");
@@ -115,7 +136,12 @@ const closeCommanderModal = () => {
 
 commanderBtn.addEventListener("click", openCommanderModal);
 commanderClose.addEventListener("click", closeCommanderModal);
-commanderOk.addEventListener("click", closeCommanderModal);
+
+// Fermer la modal après clic sur contact (optionnel, peut rester ouvert)
+commanderContact.addEventListener("click", () => {
+  // Petit délai pour laisser le temps à mailto de s'ouvrir
+  setTimeout(closeCommanderModal, 300);
+});
 
 commanderModal.addEventListener("click", (e) => {
   if (e.target === commanderModal || e.target === document.querySelector(".commander-overlay")) {

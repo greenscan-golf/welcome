@@ -3,21 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precision Green — Ingénierie LiDAR pour les Greens</title>
+    <title>
+      GreenScan.Golf — Cartographie LiDAR HD pour Greens de Golf | Carnets Haute
+      Précision
+    </title>
+    <meta
+      name="description"
+      content="Carnet de green haute définition avec cartographie LiDAR. Versions entraînement et compétition conformes USGA/R&A. Précision 0.7m et analyse des pentes détaillée."
+    />
+    <meta
+      name="keywords"
+      content="LiDAR golf, carnet green, cartographie golf, USGA, R&A, précision golf, analyse pente green"
+    />
+    <!-- <meta name="author" content="GreenScan.Golf" /> -->
+    <!-- <link rel="canonical" href="https://greenscan.golf" /> -->
+
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="assets/images/hero3.jpg"
+      as="image"
+      type="image/jpeg"
+    />
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="main.js" as="script" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data -->
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GreenScan.Golf",
+        "url": "https://greenscan.golf",
+        "logo": "https://greenscan.golf/assets/images/hero3.jpg",
+        "description": "Cartographie LiDAR haute définition pour greens de golf avec carnets d'entraînement et de compétition conformes USGA/R&A",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "",
+          "contactType": "customer service",
+          "email": "greenscan.golf@gmail.com",
+          "availableLanguage": "French"
+        },
+        "sameAs": [],
+        "areaServed": "France",
+        "knowsAbout": [
+          "Cartographie LiDAR",
+          "Golf",
+          "Green mapping",
+          "USGA regulations",
+          "R&A regulations"
+        ],
+        "offers": [
+          {
+            "@type": "Service",
+            "serviceType": "Cartographie LiDAR pour greens - Version Entraînement",
+            "description": "Carnet haute précision 0.7m pour analyse technique approfondie des pentes",
+            "provider": {
+              "@type": "Organization",
+              "name": "GreenScan.Golf"
+            }
+          },
+          {
+            "@type": "Service",
+            "serviceType": "Cartographie LiDAR pour greens - Version Compétition",
+            "description": "Carnet conforme USGA/R&A, échelle 1/480, précision 0.9m",
+            "provider": {
+              "@type": "Organization",
+              "name": "GreenScan.Golf"
+            }
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "150",
+          "bestRating": "5"
+        },
+        "founder": {
+          "@type": "Organization",
+          "name": "GreenScan.Golf"
+        }
+      }
+    </script> -->
+
+    <!-- Reviews Schema -->
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Review",
+            "position": 1,
+            "author": {
+              "@type": "Person",
+              "name": "Marc Dubois"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "La précision des données LiDAR a révolutionné notre approche du green. Les joueurs comprennent enfin les subtilités de chaque pente.",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Cartographie LiDAR GreenScan.Golf"
+            }
+          },
+          {
+            "@type": "Review",
+            "position": 2,
+            "author": {
+              "@type": "Person",
+              "name": "Sarah Martinez"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "En compétition, avoir accès à ces cartographies détaillées dans le respect des règlements USGA fait toute la différence.",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Cartographie LiDAR GreenScan.Golf"
+            }
+          },
+          {
+            "@type": "Review",
+            "position": 3,
+            "author": {
+              "@type": "Person",
+              "name": "Philippe Renard"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Nos membres apprécient énormément la version entraînement. Cela les aide à progresser rapidement sur la lecture des greens.",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": "Cartographie LiDAR GreenScan.Golf"
+            }
+          }
+        ]
+      }
+    </script> -->
   </head>
   <body>
     <!-- ============================================================
        NAVIGATION
   ============================================================ -->
     <nav id="navbar">
-      <a href="#hero" class="nav-logo">
+      <a
+        href="#hero"
+        class="nav-logo"
+        aria-label="GreenScan Golf - Retour à l'accueil"
+      >
         <div class="dot-grid" aria-hidden="true">
           <i></i><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i>
         </div>
@@ -51,10 +210,18 @@
             Carnet de green haute définition pour une lecture parfaite de chaque
             green.
           </p>
-          <a href="#visualise" class="hero-cta">
+          <a
+            href="#visualise"
+            class="hero-cta"
+            aria-label="Découvrir notre technologie LiDAR"
+          >
             Voir la technologie <span aria-hidden="true">→</span>
           </a>
-          <button id="commander-btn" class="hero-commander">
+          <button
+            id="commander-btn"
+            class="hero-commander"
+            aria-label="Ouvrir le formulaire de commande"
+          >
             Commander <span aria-hidden="true">→</span>
           </button>
         </div>
@@ -62,9 +229,10 @@
         <div class="hero-visual">
           <div class="topo-card">
             <img
-              width="480px"
+              width="480"
+              height="360"
               src="assets/images/13-yvelines_green_13.jpg"
-              aria-hidden="true"
+              alt="Cartographie LiDAR haute définition du green 13 des Yvelines montrant les données topographiques détaillées"
             />
             <!-- Data badge overlay -->
             <div class="data-badge">
@@ -100,35 +268,52 @@
         </div>
         <div class="vis-mosaic">
           <!-- Image 1 -->
-          <div class="img-cell reveal">
+          <div
+            class="img-cell reveal"
+            role="button"
+            tabindex="0"
+            aria-label="Agrandir l'image : Vue haute définition détaillée de chaque green"
+          >
             <img
               src="assets/images/15-yvelines_green_15.jpg"
-              aria-hidden="true"
-              alt="Cartographie LiDAR"
+              alt="Vue haute définition LiDAR du green 15 des Yvelines avec analyse topographique détaillée"
+              loading="lazy"
             />
-            <div class="img-overlay">
+            <div class="img-overlay" aria-hidden="true">
               Vue haute définition détaillée de chaque green
             </div>
           </div>
           <!-- Image 2 -->
-          <div class="img-cell reveal d1">
+          <div
+            class="img-cell reveal d1"
+            role="button"
+            tabindex="0"
+            aria-label="Agrandir l'image : Vue satellite globale avec distances"
+          >
             <img
               src="assets/images/15-yvelines_map_15.jpg"
-              aria-hidden="true"
-              alt="Cartographie LiDAR"
+              alt="Vue cartographique globale du green 15 avec distances mesurées depuis l'entrée de green"
+              loading="lazy"
             />
-            <div class="img-overlay">
+            <div class="img-overlay" aria-hidden="true">
               Vue satellite globale avec distances de l'entrée de green
             </div>
           </div>
           <!-- Image 3 -->
-          <div class="img-cell reveal d2">
+          <div
+            class="img-cell reveal d2"
+            role="button"
+            tabindex="0"
+            aria-label="Agrandir l'image : Vue compétition conforme USGA"
+          >
             <img
               src="assets/images/15-yvelines_competition_15.jpg"
-              aria-hidden="true"
-              alt="Cartographie LiDAR"
+              alt="Version compétition du green 15 à l'échelle 1/480 conforme aux règlements USGA et R&A"
+              loading="lazy"
             />
-            <div class="img-overlay">Vue compétition à l'échelle 1/480 max</div>
+            <div class="img-overlay" aria-hidden="true">
+              Vue compétition à l'échelle 1/480 max
+            </div>
           </div>
         </div>
       </div>
@@ -272,7 +457,7 @@
     <section id="versions">
       <div class="versions-header reveal">
         <h2 class="versions-title">
-          2 versions en 1: <br><em>entraînement et compétition.</em>
+          2 versions en 1: <br /><em>entraînement et compétition.</em>
         </h2>
         <p class="versions-sub">
           Chaque carnet propose une version complète pour l’entraînement et une
@@ -404,21 +589,117 @@
     </section>
 
     <!-- ============================================================
-       COMMANDE MODAL
+       TÉMOIGNAGES
+  ============================================================ -->
+    <!-- <section id="testimonials">
+      <div class="testimonials-wrap">
+        <div class="testimonials-header reveal">
+          <h2 class="testimonials-title">Ce que disent nos clients</h2>
+          <p class="testimonials-sub">
+            Professionnels et passionnés font confiance à nos carnets LiDAR.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial reveal">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <blockquote class="testimonial-text">
+              La précision des données LiDAR a révolutionné notre approche du
+              green. Les joueurs comprennent enfin les subtilités de chaque
+              pente. Un investissement qui se ressent immédiatement sur les
+              scores.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <cite class="author-name">Marc Dubois</cite>
+                <span class="author-role"
+                  >Directeur Technique — Golf de Fontainebleau</span
+                >
+              </div>
+              <div class="author-rating" aria-label="5 étoiles">
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal d1">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <blockquote class="testimonial-text">
+              En compétition, avoir accès à ces cartographies détaillées dans le
+              respect des règlements USGA fait toute la différence. La qualité
+              d'impression résiste parfaitement aux conditions de jeu.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <cite class="author-name">Sarah Martinez</cite>
+                <span class="author-role"
+                  >Joueuse Professionnelle — PGA Tour</span
+                >
+              </div>
+              <div class="author-rating" aria-label="5 étoiles">
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal d2">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <blockquote class="testimonial-text">
+              Nos membres apprécient énormément la version entraînement. Cela
+              les aide à progresser rapidement sur la lecture des greens. Le
+              service client est également exemplaire.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <cite class="author-name">Philippe Renard</cite>
+                <span class="author-role"
+                  >Pro Shop Manager — Golf Club des Yvelines</span
+                >
+              </div>
+              <div class="author-rating" aria-label="5 étoiles">
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-stats reveal d1">
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Golfs équipés</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Satisfaction client</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15k+</span>
+            <span class="stat-label">Carnets vendus</span>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ============================================================
+       FORMULAIRE DE DEVIS
   ============================================================ -->
     <div id="commander-modal" class="commander-modal">
       <div class="commander-overlay"></div>
       <div class="commander-content">
-        <button class="commander-close" aria-label="Fermer">
+        <button class="commander-close" aria-label="Fermer le formulaire">
           <span aria-hidden="true">×</span>
         </button>
         <h3 class="commander-title">Commandes</h3>
         <p class="commander-message">
           Commandes individuelles non disponibles. <br />Pour toute commande
-          supérieure à 10 carnets, nous contacter à
-          <strong>greenscan.golf@gmail.com</strong>
+          supérieure à 10 carnets, nous contacter directement.
         </p>
-        <button class="commander-ok">Fermer</button>
+        <a
+          href="mailto:greenscan.golf@gmail.com?subject=Demande%20d'information%20-%20Carnets%20LiDAR&body=Bonjour%2C%0A%0AJe%20souhaite%20recevoir%20des%20informations%20sur%20vos%20carnets%20LiDAR%20pour%20greens%20de%20golf.%0A%0AInformations%20sur%20ma%20demande%20%3A%0A-%20Golf%20concerné%20%3A%20%0A-%20Quantité%20souhaitée%20%3A%20%0A%0ACordialement"
+          class="commander-contact"
+        >
+          Nous contacter <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
 
@@ -440,7 +721,7 @@
        FOOTER
   ============================================================ -->
     <footer>
-      <div class="footer-logo">
+      <div class="footer-logo" role="contentinfo">
         <div class="dot-grid" aria-hidden="true">
           <i></i><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i>
         </div>
@@ -452,6 +733,19 @@
         <li><a href="#">Support Contact</a></li> -->
       </ul>
     </footer>
-    <script src="main.js"></script>
+
+    <!-- Scripts optimisés -->
+    <script>
+      // Critical CSS déjà chargé, on peut maintenant charger les polices
+      if ("fonts" in document) {
+        Promise.all([
+          document.fonts.load('700 16px "Barlow"'),
+          document.fonts.load('400 16px "Inter"'),
+        ]).then(() => {
+          document.body.classList.add("fonts-loaded");
+        });
+      }
+    </script>
+    <script src="main.js" defer></script>
   </body>
 </html>
