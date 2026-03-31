@@ -70,7 +70,7 @@ imgCells.forEach((cell) => {
     if (img) {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt || "Image agrandie";
-      lightboxCaption.textContent = overlay ? overlay.textContent : "";
+      // lightboxCaption.textContent = overlay ? overlay.textContent : "";
       lightbox.classList.add("open");
       document.body.style.overflow = "hidden";
     }

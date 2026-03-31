@@ -669,7 +669,7 @@ nav.scrolled {
 }
 
 .img-cell:hover {
-  background-size: 110%;
+  background-size: 120%;
   background-position: center;
   box-shadow: 0 30px 80px rgba(184, 216, 74, 0.3);
 }
@@ -1130,10 +1130,14 @@ footer {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  color: var(--text-light);
-  font-size: 14px;
+  color: var(--bg-alt);
+  font-size: 16px;
   text-align: center;
   animation: slideUp 0.4s ease 0.15s backwards;
+  /* background: rgba(184, 216, 74, 0.8); */
+  /* padding: 20px 60px; */
+  /* width: fit-content; */
+  /* margin: auto; */
 }
 
 @keyframes slideUp {
