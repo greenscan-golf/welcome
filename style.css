@@ -658,37 +658,39 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   min-height: 500px;
+  cursor: pointer;
+}
+
+.img-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  cursor: pointer;
-  transition:
-    background-size 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-    background-position 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.6s ease;
+  z-index: -1;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(1);
 }
 
-.img-cell:hover {
-  background-size: 120%;
-  background-position: center;
-  box-shadow: 0 30px 80px rgba(184, 216, 74, 0.3);
-}
-
-.img-cell:active {
-  background-size: 100%;
-}
-
-/* Individual images */
-.vis-mosaic > .img-cell:nth-child(1) {
+.vis-mosaic > .img-cell:nth-child(1)::before {
   background-image: url("assets/images/15-yvelines_green_15.jpg");
 }
 
-.vis-mosaic > .img-cell:nth-child(2) {
+.vis-mosaic > .img-cell:nth-child(2)::before {
   background-image: url("assets/images/15-yvelines_map_15.jpg");
 }
 
-.vis-mosaic > .img-cell:nth-child(3) {
+.vis-mosaic > .img-cell:nth-child(3)::before {
   background-image: url("assets/images/15-yvelines_competition_15.jpg");
+}
+
+.img-cell:hover::before {
+  transform: scale(1.2);
+}
+
+.img-cell:active::before {
+  transform: scale(1);
 }
 
 .img-cell::after {
@@ -698,6 +700,7 @@ nav.scrolled {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   pointer-events: none;
+  z-index: 1;
 }
 
 .img-cell img {
@@ -728,6 +731,11 @@ nav.scrolled {
   height: auto;
   width: 100%;
   border-radius: 0 0 14px 14px;
+  z-index: 2;
+}
+
+.img-cell:hover {
+  box-shadow: 0 30px 80px rgba(184, 216, 74, 0.3);
 }
 
 .img-cell:hover .img-overlay {
@@ -1511,6 +1519,9 @@ footer {
   }
   .features-grid {
     gap: 40px;
+  }
+  .img-cell:hover {
+    background-size: 200%;
   }
 }
 
