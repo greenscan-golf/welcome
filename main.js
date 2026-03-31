@@ -80,23 +80,54 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const lightboxCaption = document.getElementById("lightbox-caption");
 const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxPrev = document.querySelector(".lightbox-prev");
+const lightboxNext = document.querySelector(".lightbox-next");
 const imgCells = document.querySelectorAll(".img-cell");
 
+let currentImageIndex = 0;
+const allImages = [];
+
+// Collect all images from img-cells
+imgCells.forEach((cell, index) => {
+  const img = cell.querySelector("img");
+  const overlay = cell.querySelector(".img-overlay");
+  if (img) {
+    allImages.push({
+      src: img.src,
+      alt: img.alt || "Image agrandie",
+      caption: overlay ? overlay.textContent : "",
+    });
+  }
+});
+
 // Open lightbox
-imgCells.forEach((cell) => {
+imgCells.forEach((cell, index) => {
   cell.addEventListener("click", () => {
-    const img = cell.querySelector("img");
-    const overlay = cell.querySelector(".img-overlay");
-    
-    if (img) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt || "Image agrandie";
-      // lightboxCaption.textContent = overlay ? overlay.textContent : "";
-      lightbox.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
+    currentImageIndex = index;
+    showImage(currentImageIndex);
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
   });
 });
+
+// Show image
+const showImage = (index) => {
+  if (allImages.length === 0) return;
+  currentImageIndex = (index + allImages.length) % allImages.length;
+  const image = allImages[currentImageIndex];
+  lightboxImg.src = image.src;
+  lightboxImg.alt = image.alt;
+  lightboxCaption.textContent = image.caption;
+};
+
+// Navigation functions
+const goToPrevious = () => {
+  showImage(currentImageIndex - 1);
+};
+
+const goToNext = () => {
+  showImage(currentImageIndex + 1);
+};
 
 // Close lightbox
 const closeLightbox = () => {
@@ -105,6 +136,16 @@ const closeLightbox = () => {
 };
 
 lightboxClose.addEventListener("click", closeLightbox);
+lightboxPrev.addEventListener("click", (e) => {
+  e.stopPropagation();
+  goToPrevious();
+});
+lightboxNext.addEventListener("click", (e) => {
+  e.stopPropagation();
+  goToNext();
+});
+
+// Close on click outside (on overlay or content background)
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox || e.target === lightbox.querySelector(".lightbox-overlay")) {
     closeLightbox();
@@ -115,6 +156,10 @@ lightbox.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && lightbox.classList.contains("open")) {
     closeLightbox();
+  }
+  if (lightbox.classList.contains("open")) {
+    if (e.key === "ArrowLeft") goToPrevious();
+    if (e.key === "ArrowRight") goToNext();
   }
 });
 
