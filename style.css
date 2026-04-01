@@ -68,17 +68,21 @@ nav.scrolled {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   font-family: var(--ff-display);
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.1em;
 }
 
+.nav-logo span {
+  color: var(--green);
+}
+
 .dot-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
+  display: none;
 }
 .dot-grid i {
   display: block;
@@ -885,11 +889,14 @@ footer {
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   font-family: var(--ff-display);
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.1em;
+}
+
+.footer-logo span {
+  color: var(--green);
 }
 
 .footer-copy {
