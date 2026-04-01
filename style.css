@@ -708,7 +708,7 @@ nav.scrolled {
 }
 
 .vis-mosaic > .img-cell:nth-child(1)::before {
-  background-image: url("assets/images/15-yvelines_green_15.jpg");
+  background-image: url("assets/images/14-laval_green_14.jpg");
 }
 
 .vis-mosaic > .img-cell:nth-child(2)::before {
@@ -716,7 +716,7 @@ nav.scrolled {
 }
 
 .vis-mosaic > .img-cell:nth-child(3)::before {
-  background-image: url("assets/images/15-yvelines_competition_15.jpg");
+  background-image: url("assets/images/01-laval_competition_1.jpg");
 }
 
 .img-cell:hover::before {
