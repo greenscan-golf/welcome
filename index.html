@@ -18,11 +18,16 @@
     <!-- <meta name="author" content="GreenScan.Golf" /> -->
     <!-- <link rel="canonical" href="https://greenscan.golf" /> -->
 
-
     <!-- Preload critical resources -->
     <link
       rel="preload"
       href="assets/images/hero3.jpg"
+      as="image"
+      type="image/jpeg"
+    />
+    <link
+      rel="preload"
+      href="assets/images/hero4.jpg"
       as="image"
       type="image/jpeg"
     />
@@ -185,7 +190,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="active">Accueil</a></li>
         <li><a href="#visualise">Technologie LiDAR</a></li>
-        <li><a href="#versions">2 versions en 1</a></li>
+        <li><a href="#versions">2 versions incluses</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
@@ -195,20 +200,23 @@
        HERO
   ============================================================ -->
     <section id="hero">
+      <!-- Hero carousel container -->
+      <div id="hero-carousel" class="hero-carousel" aria-hidden="true">
+        <div class="hero-carousel-track"></div>
+      </div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-wrap">
         <!-- Left content -->
         <div class="hero-content">
           <span class="hero-tag">Cartographie LiDAR HD</span>
           <h1 class="hero-title">
-            <span class="t-white">Précision</span>
-            <span class="t-white">LiDAR</span>
-            <span class="t-green">sur Chaque</span>
-            <span class="t-green">Green</span>
+            <span class="t-white">Carnet</span>
+            <span class="t-white">de greens</span>
+            <span class="t-green">Haute</span>
+            <span class="t-green">Définition</span>
           </h1>
           <p class="hero-desc">
-            Carnet de green haute définition pour une lecture parfaite de chaque
-            green.
+            Carnet de greens LiDAR HD pour une lecture parfaite de chaque green.
           </p>
           <a
             href="#visualise"
@@ -457,10 +465,10 @@
     <section id="versions">
       <div class="versions-header reveal">
         <h2 class="versions-title">
-          2 versions en 1: <br /><em>entraînement et compétition.</em>
+          2 versions incluses: <br /><em>entraînement et compétition.</em>
         </h2>
         <p class="versions-sub">
-          Chaque carnet propose une version complète pour l’entraînement et une
+          Chaque carnet intègre une version complète pour l’entraînement et une
           version compétition amovible, facile à emporter sur le terrain.
         </p>
       </div>
@@ -712,7 +720,10 @@
         <button class="lightbox-close" aria-label="Fermer">
           <span aria-hidden="true">×</span>
         </button>
-        <button class="lightbox-nav lightbox-prev" aria-label="Image précédente">
+        <button
+          class="lightbox-nav lightbox-prev"
+          aria-label="Image précédente"
+        >
           <span aria-hidden="true">‹</span>
         </button>
         <img id="lightbox-img" src="" alt="" />
