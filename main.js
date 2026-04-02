@@ -6,8 +6,8 @@
 // Ajouter ou modifier les images ici : ['chemin/image1.jpg', 'chemin/image2.jpg', ...]
 const HERO_CAROUSEL_CONFIG = {
   images: [
-    // "assets/images/hero3.jpg",
-    "assets/images/hero6.jpg",
+    "assets/images/hero3.jpg",
+    // "assets/images/hero6.jpg",
   ],
   intervalSeconds: 7, // Délai entre les changements d'image (en secondes)
 };
